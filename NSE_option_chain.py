@@ -44,7 +44,7 @@ def req_NSE_data(url):
 
 
 def get_NSE_data(ticker, url_option):
-    BASE_URL = os.environ('BASE_URL')
+    BASE_URL = os.environ.get('BASE_URL')
     url = f"{BASE_URL}/api/option-chain-{url_option}?symbol={ticker}"
     print(f"------MAKING REQUEST TO-----\n{url}")
     return req_NSE_data(url)
